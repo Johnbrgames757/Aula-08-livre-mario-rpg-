@@ -1,0 +1,203 @@
+@charset "utf-8";
+
+@font-face {
+    
+    font-family:font2;
+    src: url(Mario-Kart-DS.ttf);
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    color: #000000;
+    font-family:font2;
+    background:#d8cdcd;
+
+}
+
+h1,
+h2 {
+    font-weight: 800;
+    color: #000000;
+    font-family:font1;
+}
+
+.wrapper {
+    width: 100%;
+    margin: 0 auto;
+   background-color: #d8cdcd;
+}
+
+main {
+    display: block;
+    background: #d8cdcd;
+}
+
+.container {
+    width: 100%;
+    max-width: 760px;
+    margin: 0 auto;
+    padding: 0 20px;
+    animation: surgir 5s ease-in-out;
+    animation-timeline: view();
+    animation-range: cover 10% cover 50%;
+}
+
+section.modulo p {
+    margin-bottom: 40px;
+    text-align: justify;
+    font-size: 1.4em;
+}
+
+section.modulo h2 {
+    margin-bottom: 40px;
+    font-size: 30px;
+    text-transform: uppercase;
+    letter-spacing: 0.2em;
+    text-align: center;
+}
+
+section.modulo.content {
+    padding: 40px 0;
+    background: rgb(216, 205, 205);
+}
+
+section.modulo.parallax {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    height: 100vh !important;
+    position: relative;
+    overflow: hidden;
+    background-position: 50% 50%;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+}
+
+
+section.modulo.parallax h1 {
+    color: #d31212;
+    text-shadow: 5px 5px 5px #380101a4;
+    font-size: 4em;
+    text-transform: uppercase;
+    text-align: center;
+    z-index: 50;
+}
+
+section.modulo.parallax:after {
+    content: "";
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    z-index: 10;
+    background: linear-gradient(to bottom, rgba(0, 0, 0, 0) 0, rgba(255, 255, 255, 0) 80%, rgb(0, 0, 0) 100%);
+}
+
+@keyframes surgir {
+    from {
+        opacity: 0;
+        translate: -100vw 0;
+
+    }
+
+    to {
+        opacity: 1;
+        translate: 0 0;
+
+    }
+
+}
+
+.btn{
+    display: inline-block;
+    background-color: #000;
+    color: #fff;
+    padding: 0.7em 1.8em;
+    margin-top: 2em;}
+
+section.modulo.parallax-1 {
+    background-image: url("https://upload.wikimedia.org/wikipedia/commons/thumb/5/5d/Super_Mario_RPG.svg/1200px-Super_Mario_RPG.svg.png");
+}
+
+section.modulo.parallax-2 {
+    background-image: url("https://i.etsystatic.com/12741197/r/il/2c9bfc/1723340874/il_fullxfull.1723340874_6ud4.jpg");
+}
+
+section.modulo.parallax-3 {
+    background-image: url("https://i.ytimg.com/vi/z-Z_Qawfvb0/hq720.jpg?sqp=-oaymwEhCK4FEIIDSFryq4qpAxMIARUAAAAAGAElAADIQj0AgKJD&rs=AOn4CLAr7Y6KO3oercvcePYFzve9FwvYCg");
+}
+
+.galeria{
+    display: flex;
+    height: 20em;
+    margin: 2em;
+    gap: 0.5em;
+    padding: 30px;
+   
+}
+
+.galeria div{
+    flex: 1;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position:75%;
+    transition: all 0.8s cubic-bezier(0.47, 0, 0.745, 0.715);
+    
+    
+}
+
+.galeria div:hover{
+flex: 2em;
+}
+
+.galeria:hover div:not(:hover){
+    filter: blur(3px);
+    filter: grayscale(1);}
+
+footer{
+    text-align: center;
+    background-color:#d8cdcd;
+    background:#d8cdcd;
+    padding: 10px;
+    padding-top: 50px;
+}
+
+
+
+@media all and (max-width: 760px) {
+
+    section.modulo p {
+        margin-bottom: 10px;
+        text-align: center;
+        font-size: 1em;
+    }
+
+    section.modulo.parallax h1 {
+        font-size: 1.5em;
+    }
+
+    section.modulo.content {
+        width: 95%;
+        background-color: #d8cdcd;
+    }
+
+    section.modulo.parallax-1 {
+        background-image: url(https://m.media-amazon.com/images/M/MV5BNmJjNjIwZDctNmFlZC00NmU1LTg5N2EtNjllMjMzMTlmZDU3XkEyXkFqcGdeQXVyMTA0MTM5NjI2._V1_.jpg);
+    }
+
+    section.modulo.parallax-2 {
+        background-image: url(https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEhhPVvmWX4tWb9AQ1W8KK6zmDqxLgq9ICcfzK3UMqOROQnS-oszd2UT8puleiV-2MbSc-N3JdpfUt58QAxnGg2NAcWk9PBqsCn2H0XX17L86gV-Ozbfk2iKp6MypqHPci89uJX5GHMVDyHjLKiT90Nlz_grQekfhX5ffExT_9E_xrtJI5yx_B5SkJJB/s946/163.png);
+    }
+
+    section.modulo.parallax-3 {
+        background-image: url(https://m.media-amazon.com/images/M/MV5BMjBhNjBkNGQtZmI1MS00MjY0LTllNTQtNTQxODE2NmM3NzI4XkEyXkFqcGdeQXVyMTA5ODEyNTc5._V1_.jpg);
+    }
+
+    footer{
+        text-align: center;
+        background-color:#d8cdcd;
+    background:#d8cdcd;
+    padding: 10px;
+    }
+}
